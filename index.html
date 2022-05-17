@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+</head>
+<body>
+    <h1 class="display-1">Cadastro</h1>
+    <span style="border:1px solid red;float:right;padding: 5px;" id="aviso">Algo deu errado</span>
+    
+    <form class="row g-3" id="formulario">
+        <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="validationDefault01" value="" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault02" class="form-label">Sobrenome</label>
+          <input type="text" class="form-control" id="validationDefault02" value="" required>
+        </div>
+        
+          
+        
+        <div class="col-md-6">
+          <label for="validationDefault03" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="validationDefault03" required>
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault04" class="form-label">Estado</label>
+          <select class="form-select" id="validationDefault04" required>
+            <option selected disabled value="">Escolha...</option>
+            <option>Espirito Santo</option>
+            <option>Minas Gerais</option>
+            <option>Rio de Janeiro</option>
+            <option>São Paulo</option>
+          </select>
+        </div>
+        
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+            <label class="form-check-label" for="invalidCheck2">
+              Eu aceito os termos
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit" id="botaoCadastrar">Cadastrar</button>
+        </div>
+      </form>
+      <br>
+      <button class="btn btn-primary" id="botaoNovo">Novo</button>
+      <input type=text id="campoPesquisa" placeholder="Pesquise pelo Nome">
+      <button class="btn btn-primary" type="submit" id="botaoPesquisar">Pesquisar</button>
+      <button class="btn btn-primary" type="submit" id="botaoLimpar">Limpar Pesquisa</button>
+      <button class="btn btn-primary" type="submit" id="botaoOrdenar" style="display: none;">Ordem Alfabética</button>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabela">
+          
+          
+        </tbody>
+      </table>
+      <script src="funcoes.js"></script>
+</body>
+</html>
